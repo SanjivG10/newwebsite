@@ -11,7 +11,7 @@ app= Flask(__name__)
 EXCHANGE_RATE_API_KEY="71f063b0214745ad9fae3bb487b14aab"
 WEATHER_API_KEY = "3d78a5edcbb22e3dcd18e6ec296c9016"
 BBC_FEED="http://feeds.bbci.co.uk/news/rss.xml"
-
+#just a random command
 
 DEFAULTS = {'publication':'bbc',
 'city': 'London,UK',
