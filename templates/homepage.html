@@ -1,0 +1,79 @@
+<!doctype html> 
+
+<html> 
+	<head>
+		<title>
+			Home
+		</title>
+		<link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">		
+		<link rel="stylesheet" type="text/css" href="{{url_for("static",filename="styles/style.css")}}">
+
+
+	</head>
+
+	<body>
+		<header>
+			<h1> 
+				Today's News
+			</h1>
+		</header>
+		<h2>Currency</h2>
+		<form>
+			from: <select name="currency_from">
+		{% for currency in currencies %}
+			<option value="{{currency}}"
+			{{'selected="selected"' if currency_from==currency}}>
+			{{currency}}</option>
+		{% endfor %}
+		</select>
+			to: <select name="currency_to">
+			{% for currency in currencies %}
+			<option value="{{currency}}"
+				{{'selected="selected"' if currency_to==currency}}>
+			{{currency}}</option>
+			{% endfor %}
+		</select>
+		<input type="submit" value="Submit">
+	</form>
+1 {{currency_from}} = {{currency_to}} {{rate}}
+		</form>
+
+		<h2>Current weather</h2>
+			<p>City: <b>{{weather.name}}</b></p>
+			<p>{{weather.main.temp}} |{{weather.temperature}}&#8451;</p>
+			<h1>Headlines</h1>
+
+	
+
+		<form action="/" method="post">
+			<input type="text" placeholder="Search" name="publication"> 
+			<input type="submit" value="Search">
+		</form>	 
+			<br> 
+			<br>	
+		<form method="post" action="/">
+			<input type="text" name="city" placeholder="Weather Search">
+			<input type="submit" value="Submit">
+		</form>
+
+		<div class="content">
+			<content > 
+				  {%for article in articles%}
+				  		<h1> <a href={{article.link}}> {{article.title}} </a> </h1>
+				  		<em> {{article.published}} </em>
+				  		<br>
+				  		<h2> {{article.description}}</h2>
+				  {% endfor %}
+			</content>			
+		</div>
+
+
+		<footer>
+			&copy; Copyright Reserved | All Rights Reserved | Reddit Nepal
+
+		</footer>	
+
+
+	</body>
+
+</html>

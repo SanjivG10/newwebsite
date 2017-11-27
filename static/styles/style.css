@@ -1,0 +1,42 @@
+footer
+{
+    font-family: serif; 
+    background-color: white;
+}
+
+header{
+	font-family: serif;
+}
+.content
+{
+	    font-family: 'Gloria Hallelujah', serif; 
+	    background-color: yellow;
+}
+
+.content h1{
+	font-family: serif;
+	color: red; 
+}
+
+input[type="submit"]
+{
+padding: 5px 10px 5px 10px;
+color: black;
+background: lightsteelblue;
+border: none;
+box-shadow: 1px 1px 1px #4C6E91;
+}
+
+input[type="text"], select {
+color: grey;
+border: 1px solid lightsteelblue;
+height: 30px;
+line-height:15px;
+margin: 2px 6px 16px 0px;
+}
+
+input[type="submit"] :hover 
+{
+	background: yellow; 
+	background-color: yellow; 
+}
